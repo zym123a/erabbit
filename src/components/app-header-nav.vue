@@ -30,7 +30,7 @@ import { useStore } from 'vuex'
         const list = computed(()=>{
             return store.state.category.categoryList
         })
-        console.log(list)
+        // console.log(list)
         const show=(item)=>{
             store.commit('category/show',item.id)
         }
