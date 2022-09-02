@@ -1,24 +1,31 @@
 <template>
   <div>
     <!-- 顶部通栏 -->
-    <nav>顶部通栏</nav>
+    <AppTopnav></AppTopnav>
     <!-- 头部组件 -->
-    <header>头部组件</header>
+    <AppHeader></AppHeader>
     <!-- 内容容器 -->
-    <div class="main">
+    <div class="app-body">
         <router-view></router-view>
     </div>
     <!-- 底部组件 -->
-    <footer>底部组件</footer>
+    <AppFooter></AppFooter>
   </div>
 </template>
 
 <script>
+import AppTopnav from '@/components/app-topnav.vue';
+import AppHeader from '@/components/app-header.vue';
+import AppFooter from '../components/app-footer.vue';
 export default {
-
+    components: { AppTopnav, AppHeader, AppFooter }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+    .app-body{
+      min-height: 600px;
+    }
+
 
 </style>
